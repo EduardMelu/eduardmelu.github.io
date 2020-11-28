@@ -1,0 +1,1 @@
+This represents a quick overview over the recent activity

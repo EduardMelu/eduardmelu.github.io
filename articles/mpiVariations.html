@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MPI VARIATIONS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1 id="logo">MPI VARIATIONS</h1>
+						</div>
+					</div>
+				</header>
+
+			<!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="current"><a href="../research.html">Research</a></li>
+                    <li><a href="../stocks.html">Stocks</a></li>
+                    <li><a href="../skills.html">Skills</a></li>
+                    <li><a href="../about.html">About me</a></li>
+                </ul>
+            </nav>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="content">
+                                    <header>
+                                        <p>Authors</p>
+                                        <ul class="meta">
+                                            <li class="icon fa-user">Melu Eduard</li>
+                                            <li class="icon fa-user">Marian Andrada</li>
+                                        </ul>
+                                    </header>
+                                    
+										<article class="box page-content">
+                                            <section>
+                                                <h3>Introduction</h3>
+                                                <p>There are two dominant architectures in use today: distributed memory and shared memory. The shared memory provides cooperating processes with a shared memory address space that can be accessed by all processors. On the other hand, in the shared memory, parallel processing occurs through the use of shared data structures. Since the cost of a supercomputer is huge,  
+
+                                                    and a pc or workstation can be bought for a decent price, everyone looks for an option to allow the same software to run on clusters of workstations and traditional supercomputers. 
+                                                    
+                                                    The solution was the use of MPI (Message Passing Interface) but of course, there are other options. </p>
+                                            </section>
+                                            <section>
+                                                <h4>MPICH</h4>
+                                                <p>This version came from Argonne National Labs and Mississippi State University. And it works in a cluster environment by spawning processes on the nodes based on a machines file and parameters given to the mpirun command 
+
+                                                    . The machines can present each of the node by name. The user can use the mpirun command and the machine will parse the machine file and on each node of the cluster a process will be spawned 
+                                                    
+                                                    but this is done in the order they are listed in the machine file. The cool thing is that let's say the user wants more nodes than it's possible, well the mpirun can be made to spawn  
+                                                    
+                                                    multiple processes per machine until the requested number of processes have been started. The command uses the rsh command or a functional equivalent pr using a special daemon process that will run on each node in the cluster 
+                                                    
+                                                    Sadly, if the mpirun fails and the programmer did not handle the case carefully, the program may hang indefinitely. And this is a problem because then the programmer might kill the process but on 
+                                                    
+                                                     
+                                                    
+                                                     
+                                                    
+                                                    the nodes there will be zombie processes that are still running wich may lead to performance degradation and it is possible that these zombie processes will consume the whole memory of a node preventing any jobs from executing. </p>
+                                            </section>
+                                            <section>
+                                                <h4>LAM/MPI</h4>
+                                                <p>The LAM (Local Area Multicomputer) MPI distribution spawns processes on the compute nodes in an interesting way. The user first creates a group of server daemons running on the compute nodes 
+
+                                                    (they are spawned using the rsh command). And these daemons act as an "allocation" of the nodes.These LAM daemons are similar to MPICH distribution but theu run as 
+                                                    
+                                                    the user invoking the job. The user must create and remove daemons through various LAM provided utilities. So this gives the user more freedom, it might cause some problems too but it all depends on the user. </p>
+                                            </section>
+                                            <section>
+                                                <h4>PVM</h4>
+                                                <p>
+                                                    PVM exactly like MPI uses rsh to spawn processes on the compute nodes. It generates daemons on each of the machines based on a machine list supplied by the user. A unique and interesting feature that the PVM has is that it allows a user to add or delete machines from a  
+
+running parallel program on the fly. This would be an incredible feature to play with, resulting in many interesting experiments. PMV adds and deletes nodes from the working set by taking advantage of the pvmd that runs on each node in the active working set 
+
+Again, it does provide a set of functions for parallelizing an existing source program and supports broadcasting (it sends to all processes in a group.) 
+                                                </p>
+                                            </section>
+										</article>
+								</div>
+							</div>
+							<div class="col-12">
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-12">
+
+								<!-- Contact -->
+                                <section id="contact-me">
+                                    <h2 class="major"><span>Get in touch</span></h2>
+                                    <ul class="contact">
+                                        <li><a class="icon brands fa-facebook-f" href="https://www.facebook.com/eduard.melu/"><span class="label">Facebook</span></a></li>
+                                        <li><a class="icon brands fa-instagram" href="https://www.instagram.com/redivity/"><span class="label">Instagram</span></a></li>
+                                        <li><a class="icon brands fa-hackerrank" href="https://www.hackerrank.com/edymelu"><span class="label">hackerrank</span></a></li>
+                                        <li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/eduard-melu-5b65a61a4"><span class="label">LinkedIn</span></a></li>
+                                    </ul>
+                                </section>
+
+							</div>
+						</div>
+
+						<!-- Copyright -->
+						<div id="copyright">
+                            <ul class="menu">
+                                <li>&copy; Untitled. All rights reserved</li><li>Design: Redivity/HTML5 Up</li>
+                            </ul>
+                        </div>
+
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
