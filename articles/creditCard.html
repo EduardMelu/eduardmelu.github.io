@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Credit Card Fraud Detection</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1 id="logo">Credit Card Fraud detection in credit cards using
+                                Binary Classification
+                                </h1>
+						</div>
+					</div>
+				</header>
+
+			<!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="current"><a href="../research.html">Research</a></li>
+                    <li><a href="../stocks.html">Stocks</a></li>
+                    <li><a href="../skills.html">Skills</a></li>
+                    <li><a href="../about.html">About me</a></li>
+                </ul>
+            </nav>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="content">
+                                    <header>
+                                        <p>Authors</p>
+                                        <ul class="meta">
+                                            <li class="icon fa-user">Melu Eduard</li>
+                                            <li class="icon fa-user">Marian Andrada</li>
+                                        </ul>
+                                    </header>
+                                    
+										<article class="box page-content">
+                                            <section>
+                                                <h3>Introduction</h3>
+                                                <p>The topic has been intensely discussed over the years, because of the
+                                                    high demand in the banking industry. There are a lot of solutions that
+                                                    have incredible results. Over the years solutions using deep learning
+                                                    methods, artificial neural network, random forests or logistic
+                                                    regression were implemented, but we will focus only focus on the
+                                                    comparison between the algorithms that implement the idea of
+                                                    binary classification. The most important aspect would be the
+                                                    comparison between the most respected algorithms like decision tree
+                                                    (of course boosted), logistic regression, and artificial neural
+                                                    network. The dataset will be taken from real life cases in order to be
+                                                    more precise.
+                                                    The humanity goes through hard times because of the global
+pandemic. The lockdown broke the spirit of so many people and whole
+businesses moved online, including shops. This is a good thing but also a
+bad thing since the most common method of payment is a credit card. In
+the previous years we have seen how credit card fraud increased drastically
+since so many businesses migrated online. The fig1. Shows the evolution
+of credit card fraud over the years, this being the number one method for
+identity thief. In addition to the increased number of online payments
+comes the new trend of paying with google pay or other similar apps. This
+is very convenient since you don't use the physical card and it's super
+comfy. But the problem comes when we think that this is a possibility due
+to the NFC technology and it could be easily attacked using a card cloner.
+Fig1. Cred card fraud evolution
+I know the idea is scary but we must face it...it's a reality and it is affecting
+people's lives having an incredible impact on their financial status and on
+their technology trust. The Association for Payment Clearing Services
+(APACS) has reported that gross losses due to credit card fraud have risen
+steadily from £122 million in 1997 to £40.3 million in 2010 in the United
+Kingdom [2]. This is why this was such an important problem and why it
+received so much attention from the academic society </p>
+                                            </section>
+                                                <section>
+                                                    <h3>A Review</h3>
+                                                    <p>Credit card fraud detection is a discussed and important topic which
+                                                        has received a lot of attention from the academic world. And this is not a
+                                                        new thing. For example, in 1997 Ginel, Cruz and Dorronsoro had created
+                                                        a fraud detection system that was built online and was based on a neural
+                                                        classifier. Also, McDonald and Bell in 1996 have created a system that was
+                                                        based on logit techniques but since then the problem continued to exist and
+                                                        become even more severe. So not only the academic world was involved
+                                                        but also the governments. And in the paper [2] there is a more detailed list
+                                                        based on the article, method and also the country. The most used
+                                                        techniques were based on binary classification using neural networks,
+                                                        Bayesian methods, decision trees </p>
+                                                </section>
+                                                <section>
+                                                <h3>Binary Classification Methods</h3>
+                                                <p>As we have seen from Fig2 the most used methods for solving this
+                                                    problem are binary classification methods so we will focus on that. But
+                                                    also after reading the findings of papers [1][4] I chose to focus on the
+                                                    comparison and of three methods: artificial neural network, decision trees,
+                                                    and logistic regression. 
+                                                    3.1 Data Set
+                                                    A crucial part for the success of a machine learning algorithm
+                                                    is the data itself. This time the article [1] suggests the use of data that
+                                                    comes from real-time transactions and the history database with
+                                                    more than 40 fields. This should be easily applied to any bank that
+                                                    is why this schema was chosen. From all records about 0.07% are
+                                                    frauds so this means the set is imbalanced so it would clearly need a
+                                                    pre-processing. So the values that were missing were ignored, log
+                                                    transformation was applied, and the key variables were extracted
+                                                    leaving with the Fig3 table of variables.
+                                                    This problem had many solutions, but we will focus on the
+                                                    artificial neural network, logistic regression and decision tree.
+                                                    So, we will start with neural networks that are formed by
+                                                    grouping nodes into layers and connecting these layers with some
+                                                    interconnections that have different weighted values. The problem
+                                                    with this as the paper [5] proves it: " illogical weightings of the
+                                                    indicators and overfitting in the training stage both of which
+                                                    negatively impacts predictive accuracy.".
+                                                    However, it was still used because it is considered better in the pure
+                                                    theoretical aspect than a classical statistical method in the fraud
+                                                    detection application.
+                                                    Decision tree is a classic and easy to understand method that
+                                                    have the power to deal with constant data. The main perfect decision
+                                                    tree would be a tree with high precision and small scale. The reason
+                                                    it would be a perfect match for the credit card problem is that is very
+                                                    flexible because of its non-parameter method and also it is
+                                                    explainable.
+                                                    Logistic Regression comes in handy when dealing with data
+                                                    where we want to predict if a certain characteristic is present or not
+                                                    based on a set of predictor variables. </p>
+                                                </section>
+                                                <section>
+                                                    <h3>Experimental Results</h3>
+                                                    <p>The data for training and tested was composed of transactions from
+                                                        2006 and data from 2005 just for testing. The metric used to measure the
+                                                        performance was lift since it is commonly used on classification
+                                                        application. In lift metric the data its's sorted in descended order by the
+                                                        posterior probabilities and then dividing records into deciles. The
+                                                        transactions are placed into a category based on their response. In the left
+                                                        column there are out deciles with 0.1 corresponding to the highest
+                                                        responder. The average response rate is 0.07% .
+                                                        Fig4. The results from paper in lift [1]
+                                                        In fig4 we can see the actual results from the experiment. We notice
+                                                        that in the highest lift is located in the top decile and it is given by an
+                                                        artificial neural network 5.88, followed by the logit regression 5.84 and
+                                                        decision trees with 3.89. and with the lift chart from fig5 we can be sure 
+                                                        that the neural network is the best one in lift metric followed by logit
+                                                        regression and in the end decision trees.
+                                                        Fig5. Lift chart [1]
+                                                        However, in the paper [6] it is shown that decision trees are
+                                                        mentioned in 19 articles even though their performance in lift metric
+                                                        is not so good, while the logit regression it's mentioned 8 times. The
+                                                        king still is an artificial neural network with 20 articles describing
+                                                        this solution. In the same study it is proven that both artificial neural
+                                                        network and decision trees have medium accuracy medium coverage
+                                                        but high cost in contrast with logistic regression that possess 100%
+                                                        true positive accuracy and medium coverage and cost.
+                                                        The lift metric was used because we wanted to test the performance
+                                                        of the model itself. Also, since the data was imbalanced even after
+                                                        pre-processing then this was the correct result. The formula for lift
+                                                        calculus is quite simple: lift = (predicted rate / average rate)</p>
+                                                </section>
+                                                <section>
+                                                    <h3>Conclusion</h3>
+                                                    <p>Credit card fraud is a real problem that can cause so many problems
+                                                        and it should be stopped at any costs. As we've seen the number of articles
+                                                        trying to deliver a solution is incredible showing the implication of
+                                                        researchers. The most used method is an artificial neural network which
+                                                        shows incredible results in lift metrics. But logistic regression and decision
+                                                        trees both have its advantages. In the following years we may see a rise in
+                                                        credit card frauds since everything is moving online and this pandemic only
+                                                        accelerated the process. Beside governments a lot of banks are still
+                                                        investing in the research of this topic in order to keep regular people's
+                                                        money safe. In addition, companies like Microsoft stepped in with different
+                                                        solution. Their solution is based on a super boosted decision tree called
+                                                        Fast Tree. This involvement can take us one step closer to finding and
+                                                        implementing a universal solution that could reduce to 0 the credit card
+                                                        frauds. Further work can be done on this topic by analyzing more results
+                                                        from different articles. And note what is the difference in the methods. This
+                                                        can lead to more discoveries that can have a positive impact on the subject.</p>
+                                                </section>
+										</article>
+								</div>
+							</div>
+							<div class="col-12">
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-12">
+
+								<!-- Contact -->
+                                <section id="contact-me">
+                                    <h2 class="major"><span>Get in touch</span></h2>
+                                    <ul class="contact">
+                                        <li><a class="icon brands fa-facebook-f" href="https://www.facebook.com/eduard.melu/"><span class="label">Facebook</span></a></li>
+                                        <li><a class="icon brands fa-instagram" href="https://www.instagram.com/redivity/"><span class="label">Instagram</span></a></li>
+                                        <li><a class="icon brands fa-hackerrank" href="https://www.hackerrank.com/edymelu"><span class="label">hackerrank</span></a></li>
+                                        <li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/eduard-melu-5b65a61a4"><span class="label">LinkedIn</span></a></li>
+                                    </ul>
+                                </section>
+
+							</div>
+						</div>
+
+						<!-- Copyright -->
+						<div id="copyright">
+                            <ul class="menu">
+                                <li>&copy; Untitled. All rights reserved</li><li>Design: Redivity/HTML5 Up</li>
+                            </ul>
+                        </div>
+
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

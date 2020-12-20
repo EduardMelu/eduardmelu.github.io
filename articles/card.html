@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Credit Card Fraud Detection</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1 id="logo">Credit Card Fraud detection in credit cards using
+                                Binary Classification
+                                </h1>
+						</div>
+					</div>
+				</header>
+
+			<!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="current"><a href="../research.html">Research</a></li>
+                    <li><a href="../stocks.html">Stocks</a></li>
+                    <li><a href="../skills.html">Skills</a></li>
+                    <li><a href="../about.html">About me</a></li>
+                </ul>
+            </nav>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="content">
+                                    <header>
+                                        <p>Authors</p>
+                                        <ul class="meta">
+                                            <li class="icon fa-user">Melu Eduard</li>
+                                            <li class="icon fa-user">Marian Andrada</li>
+                                        </ul>
+                                    </header>
+                                    
+										<article class="box page-content">
+                                            <section>
+                                                <h3>Introduction</h3>
+                                                <p>TAbstract
+                                                    It is not a hidden fact that we are living in the digital era, this means
+                                                    everything is done online, this includes money management and the whole ecommerce area. So, the credit card fraud is often a problem that results in the loss
+                                                    of many important things. This problem can be prevented by using machine
+                                                    learning algorithms. In the literature there are several methods to solve this
+                                                    problem, using Neural Networks, Logistic Regression, Naive Bayes, Decision
+                                                    Trees, and in this report, I will focus on the comparison between them but the
+                                                    focus will be on the binary classification methods. We will see the comparison
+                                                    on more than one data-set. I tried to include real-world examples too in order to
+                                                    show the scalability.
+                                                    In an era where everything happens fast, sometime we forget to check the
+                                                    security of our credit card. So, for commodity we save the credit card on apps.
+                                                    This can lead to a credit card fraud. In order to solve a possible credit card fraud,
+                                                    we could use AI but there are so many ways to do it. We could rely on Neural
+                                                    Networks, Logistic Regression, Naive Bayes, Decision Trees, Random forest,
+                                                    Multilayer perceptron but we will focus on the performance of binary
+                                                    classification methods and we will compare it with other results. Performance is
+                                                    key to any software since the world we live in is going at top speed. How often
+                                                    we meet this problem? The answer is very often as fig 1 shows it. This is a
+                                                    problem since in 2020 the pandemic gave everyone a hard time but with the global
+                                                    lockdown the popularity of web shopping increased drastically and this means
+                                                    that by the end of 2020 the cred card fraud could double and in times like this,
+                                                    the last thing a person would want is to lose all his money. </p>
+                                            </section>
+                                                <section>
+                                                    <h3>Literature Survey</h3>
+                                                    <p>The problem has piqued the interest of many incredible minds, and the
+                                                        solution of this problem would be to detect credit card fraud with decision trees
+                                                        and support vector machines as Y.Sahin and E.Duman would prove "as the size
+                                                        of the training data sets become larger, the accuracy performance of SVM based
+                                                        models reach the performance of the decision tree-based models "[1]. But we
+                                                        are not talking about performance here. This was a problem way back. For
+                                                        example, in 1994 Gosh, Reilly created a neural network that would detect and
+                                                        classify an account as fraud with a higher rate of success over rule-based
+                                                        procedures. Another idea came from Dhar and Buescher in 1996 that used
+                                                        historical data on cred card transaction to create a fraud score model and used a
+                                                        clustering approach on a radial basis function network[3]. Other approaches
+                                                        were the use of classic algorithms such as gradient boosting, decision trees,
+                                                        logistic regression, all came with different results and they will be compared in
+                                                        the following chapters.</p>
+                                                </section>
+                                                <section>
+                                                <h3>Binary Classification Methods</h3>
+                                                <p>As I said before there are a lot of ways to solve this problem but we will
+                                                    focus on the binary classification solutions since according to the paper Credit
+                                                    Card Fraud Detection [2] the best results in terms of accuracy were binary
+                                                    classification methods. For example, random forests had an accuracy of 95.5%,
+                                                    the second place was a Decision Tree algorithm with 94.3%, and linear
+                                                    regression with 90%.
+                                                    3.1 Dataset
+                                                    The dataset that was used is a popular one that can be downloaded
+                                                    from Kaggle[4] and is made with the data of European cardholders of the
+                                                    year 2013. This dataset contains approx. 284,807 transaction and only
+                                                    492 that were labeled as fraud. The dataset is transformed using principal
+                                                    component analysis. And the variables V1....V28 represent PCA features
+                                                    and the rest are considered non-PCA like time, amount, class. Since one
+                                                    crucial aspect of the experimental results is the distribution ratio of
+                                                    classes the data will need some preprocessing.
+                                                    3.2 Methodology
+                                                    Not all features are useful and if we keep them it may lead to
+                                                    overfitting so, a we must carefully select the more important ones and
+                                                    remove the others in order to reduce the training time and improve the
+                                                    accuracy. In order to filter all the useful features, Will Koehrsen's tool
+                                                    was used [5] and this led to reducing the number of useful features by
+                                                    95%. So only 27 features continued to the next phase.
+                                                    Because the data is highly imbalanced, a class distribution
+                                                    adjusting method is used. The most common ones are: oversampling the
+                                                    minority class, undersampling the majority class, or a hybrid between
+                                                    those two.
+                                                    A popular oversampling method that was used in both [2] and [6]
+                                                    articles was SMOTE (Synthetic Minority Oversampling Technique)
+                                                    because is highly effective when it comes to imbalanced datasets. The
+                                                    before and after results are incredible as a we can see in Fig 2.
+                                                    Fig2. Distribution of classes: before – after [2]
+                                                    3.3 Binary Classification Methods used
+                                                    Since the beginning of the article out goal was to see the
+                                                    performance on different binary classification methods. So in article [2]
+                                                    and [6] they've built and trained the models and we will compare the
+                                                    results and determine which one has better results in terms of precision
+                                                    and accuracy.
+                                                    Logistic regression describes a relationship between predictors that
+                                                    can be categorical, binary and continuous. Depending on some predictors
+                                                    we determine if something will happen or not and we decide the
+                                                    probability of belonging to each category of the given set of predictors.
+                                                    Naive Bayes is another supervised learning algorithm in which the
+                                                    attributes have no dependencies between them and it's based on the Bayes
+                                                    theorem. In the experiment the Bernouli distribution was used for
+                                                    detecting fraudulent transactions.
+                                                    Decision trees is yet another supervised learning algorithm in
+                                                    which the structure is similar to real life tree but there are three kind of
+                                                    nodes: root node, intermediary node and leaf node which is the terminal
+                                                    node. So, based on a set of factors, in order for a decision tree to make a
+                                                    correct classification, it will check at each level a set of conditions and it
+                                                    will navigate through the decision tree until it has the final conclusion.
+                                                    Support vector machines is a supervised learning algorithm that
+                                                    trains on a set of data that is already classified into the correct categories
+                                                    and then tries to reconstruct the initial model, also it does all this by
+                                                    sorting the data.
+                                                    Random forests can be used for classification or regression and it
+                                                    uses collection of decision trees for classification but outperforming
+                                                    them.
+                                                    The set of data was split in a 80:20 ratio, 80% for training and 20%
+                                                    for testing.</p>
+                                                </section>
+                                                <section>
+                                                    <h3>Experimental Results</h3>
+                                                    <p>Experimental Results
+                                                        As I said before we will focus on the performance of binary
+                                                        classification methods and comparing them over accuracy and precision.
+                                                        The total sum of the samples is 56962 and out of that number 98 are fraud
+                                                        transactions.
+                                                        Results:
+                                                        Linear Regression:
+                                                        Precision: 58.72%
+                                                        Accuracy: 97.46%
+                                                        Predicted as fraud: 1530
+                                                        Actual fraud: 98
+                                                        Predicted as not fraud: 55432
+                                                        Actual not fraud: 56864
+                                                        Naïve Bayes:
+                                                        Precision: 16.17%
+                                                        Accuracy: 99.23%
+                                                        Predicted as fraud: 501
+                                                        Actual fraud: 98
+                                                        Predicted as not fraud: 56461
+                                                        Actual not fraud: 56864
+                                                        Random Forest:
+                                                        Precision: 96.38%
+                                                        Accuracy: 99.96%
+                                                        Predicted as fraud: 83
+                                                        Actual fraud: 98
+                                                        Predicted as not fraud: 56879
+                                                        Actual not fraud: 56864
+                                                        Decision Tree:
+                                                        Precision: 98.14%
+                                                        Accuracy: 97.08%
+                                                        Support vector machine:
+                                                        Precision: 98.31%
+                                                        Accuracy: 97.18%
+                                                        As the paper [2] suggest it, the results prove that a classical approach can
+                                                        be as successful as the more popular choices like deep learning
+                                                        algorithms. And this idea is more detailed and supported by the articles
+                                                        [7] and [8]. " The findings of this study indicate promising results with
+                                                        SMOTE based sampling techniques. The best recall score obtained was
+                                                        with SMOTE sampling strategy by DRF classifier at 0.81."[8].</p>
+                                                </section>
+                                                <section>
+                                                    <h3>Conclusion</h3>
+                                                    <p>As we've seen the problem of cred fraud represents a real threat. Not to
+                                                        mention that in this year we've also seen the introduction of applications that
+                                                        lets you pay with NFC which can be a huge problem for a person with the
+                                                        knowledge of credit card cloning. There are number of ways that were proposed
+                                                        to combat this problem, and as we've seen with the experimental results, the
+                                                        classical algorithms are as successful as a deep learning method but only if we
+                                                        would pre-process the dataset with SMOTE strategy. The best supervised
+                                                        learning algorithm in terms of precision was Support vector machine with a
+                                                        precision of 98.31% and in terms of accuracy random forest with an accuracy of
+                                                        99.69%. And the paper [1] remarked "as the size of the training data sets
+                                                        become larger the accuracy performance of SVM based models reach the
+                                                        performance of the decision tree-based models ".
+                                                        The idea to use binary classification to solve this problem was also
+                                                        borrowed by Microsoft in order to develop a model that can be trained and
+                                                        consumed as an API in ML.NET. The algorithm they used was their innovative
+                                                        FastTree (which is a super optimized boosted tree) and binary classification.
+                                                        I intend to analyze other papers that solved the exact problem using
+                                                        binary classification methods but to be sure, I will search for more up-to-date
+                                                        datasets that came from real banks across the world.</p>
+                                                </section>
+										</article>
+								</div>
+							</div>
+							<div class="col-12">
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-12">
+
+								<!-- Contact -->
+                                <section id="contact-me">
+                                    <h2 class="major"><span>Get in touch</span></h2>
+                                    <ul class="contact">
+                                        <li><a class="icon brands fa-facebook-f" href="https://www.facebook.com/eduard.melu/"><span class="label">Facebook</span></a></li>
+                                        <li><a class="icon brands fa-instagram" href="https://www.instagram.com/redivity/"><span class="label">Instagram</span></a></li>
+                                        <li><a class="icon brands fa-hackerrank" href="https://www.hackerrank.com/edymelu"><span class="label">hackerrank</span></a></li>
+                                        <li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/eduard-melu-5b65a61a4"><span class="label">LinkedIn</span></a></li>
+                                    </ul>
+                                </section>
+
+							</div>
+						</div>
+
+						<!-- Copyright -->
+						<div id="copyright">
+                            <ul class="menu">
+                                <li>&copy; Untitled. All rights reserved</li><li>Design: Redivity/HTML5 Up</li>
+                            </ul>
+                        </div>
+
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
