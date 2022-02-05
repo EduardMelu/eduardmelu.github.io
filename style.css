@@ -529,7 +529,113 @@ html,body{
 .row-item i{
   padding: 15px 20px;
   font-size: 3rem;
+  width: 70px;
 }
+
+.projects{
+  width: 80vw;
+  margin: auto;
+}
+
+.card{
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid rgb(175 172 172);
+  background: linear-gradient(135deg, rgba(22,24,25,1) 0%, rgba(93,92,91,0.3) 50%, rgba(22,24,25,1) 100%);
+}
+
+.card p{
+  color: white;
+  text-shadow: 0px 0px 5px rgb(206 244 219);
+  padding: 10px;
+  line-height: 2rem;
+  font-size: 23px;
+}
+
+.card a{
+  color: white;
+  text-shadow: 0px 0px 5px rgb(206 244 219);
+  padding: 10px;
+  line-height: 2rem;
+  font-size: 23px;
+  margin:10px;
+  text-decoration: none;
+  border: 1px solid rgb(175 172 172);
+}
+
+.card a:hover{
+  font-weight: 900;
+}
+
+.tag-container{
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tag{
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  padding: 5px 15px;
+  width: fit-content;
+  border-radius: 30px;
+  text-shadow: 0px 0px 5px rgb(206 244 219);
+}
+
+.img-container{
+  width: 100%;
+  height: 45%;
+  background-size: 100%;
+  background-repeat: round;
+  border-radius: 15px 15px 0 0;
+}
+
+.gallery {
+  background: transparent;
+}
+
+.gallery-cell {
+  width: 28%;
+  height: 60vh;
+  margin-right: 20px;
+  filter: blur(1px);
+}
+
+.gallery-cell.is-selected {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+.flickity-prev-next-button.previous{
+  transform: translateX(-5vw);
+  box-shadow: 0px 0px 17px -6px rgb(206 244 219);
+  text-shadow: 0px 0px 5px rgb(206 244 219);
+}
+
+.flickity-prev-next-button.next{
+  transform: translateX(5vw);
+  box-shadow: 0px 0px 17px -6px rgb(206 244 219);
+  text-shadow: 0px 0px 5px rgb(206 244 219);
+}
+
+
+.flickity-page-dots .dot {
+  border: 1px solid white;
+  box-shadow: 0px 0px 17px -6px rgb(206 244 219);
+  text-shadow: 0px 0px 5px rgb(206 244 219);
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: white;
+  
+}
+
 /* Not done by me : Credit: https://codepen.io/mikegolus/pen/jJzRwJ*/
 .glass {
     position: relative;
