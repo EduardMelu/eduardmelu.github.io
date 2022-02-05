@@ -655,6 +655,7 @@ html,body{
 .beer-fun-credits-mike-golus{
   width: fit-content;
   height: 80vh;
+  position: relative;
 }
 
 .gallery {
@@ -970,7 +971,7 @@ html,body{
   
   /* INSTRUCTIONS */
   .instructions {
-    position: fixed;
+    position: absolute;
     left: 50%;
     top: 50%;
     color: #fff;
