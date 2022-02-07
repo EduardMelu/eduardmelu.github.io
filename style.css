@@ -669,6 +669,14 @@ html,body{
   filter: blur(3px);
 }
 
+.copyright{
+  text-shadow: 0px 0px 5px rgb(206 244 219);
+  color: white;
+  position: absolute;
+  bottom: 1vh;
+  right: 2vw;
+}
+
 .gallery-cell.is-selected {
   -webkit-filter: blur(0);
   filter: blur(0);
