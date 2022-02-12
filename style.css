@@ -818,7 +818,7 @@ html,body{
   }
 }
 
-@media(max-width: 980px) {
+@media only screen and  (max-width: 980px) {
   .skill-list{
     overflow-y: scroll;
   }
@@ -832,6 +832,11 @@ html,body{
 
   .gallery-cell {
     width: 50%;
+  }
+
+  .img-container{
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .card a{
@@ -865,9 +870,13 @@ html,body{
   }
 }
 
-@media(max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .skills{
     margin-top: -8%;
+  }
+
+  .card{
+    overflow-y: scroll;
   }
 
   .skill-list{
@@ -931,18 +940,18 @@ html,body{
   }
 }
 
-@media(max-width: 601px) {
+@media only screen and (max-width: 601px) {
   .skill-list .item{
     width: 95%;
   }
 
   .card p{
-    font-size: 18px;
+    font-size: 19px;
     line-height: 2.5rem;
   }
 
   .card a{
-    font-size: 16px;
+    display: none;
   }
 
   .tag{
@@ -969,6 +978,7 @@ html,body{
     height: 36vh;
     margin-top: 30px;
   }
+
 }
 /* Not done by me : Credit: https://codepen.io/mikegolus/pen/jJzRwJ*/
 .glass {
